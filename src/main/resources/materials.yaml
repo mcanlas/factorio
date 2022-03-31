@@ -1,10 +1,10 @@
 - name: Wood
-  miningSpeed: .5
+  miningSpeed: 0.5
 - name: Coal
-  miningSpeed: .5
+  miningSpeed: 0.5
 - name: Stone
-  miningSpeed: .5
+  miningSpeed: 0.5
 - name: Iron ore
-  miningSpeed: .5
+  miningSpeed: 0.5
 - name: Copper ore
-  miningSpeed: .5
+  miningSpeed: 0.5
