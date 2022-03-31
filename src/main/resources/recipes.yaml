@@ -6,7 +6,7 @@
 - name: Copper plate
   time: 3.2
   requirements:
-    - name: Iron ore
+    - name: Copper ore
       quantity: 1
 - name: Iron gear wheel
   time: 0.5
