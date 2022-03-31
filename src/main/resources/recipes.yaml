@@ -1,0 +1,22 @@
+- name: Iron plate
+  time: 3.2
+  requirements:
+    - name: Iron ore
+      quantity: 1
+- name: Copper plate
+  time: 3.2
+  requirements:
+    - name: Iron ore
+      quantity: 1
+- name: Iron gear wheel
+  time: 0.5
+  requirements:
+    - name: Iron plate
+      quantity: 2
+- name: Science pack
+  time: 5
+  requirements:
+    - name: Copper plate
+      quantity: 1
+    - name: Iron gear wheel
+      quantity: 1
