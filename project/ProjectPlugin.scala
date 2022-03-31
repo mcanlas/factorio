@@ -25,6 +25,15 @@ object ProjectPlugin extends AutoPlugin {
 
       def withTesting: Project =
         p.settings(libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.11" % "test")
+
+      def withYaml: Project =
+        p.settings(libraryDependencies += "io.circe" %% "circe-yaml" % "0.14.1")
+
+      def withFileIOScala3: Project =
+        p
+          .settings(
+            libraryDependencies += ("com.github.pathikrit" %% "better-files" % "3.9.1").cross(CrossVersion.for3Use2_13)
+          )
     }
   }
 }
