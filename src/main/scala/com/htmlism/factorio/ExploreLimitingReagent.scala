@@ -36,4 +36,4 @@ class ExploreLimitingReagent[F[_]](implicit F: Sync[F]):
         .loadAs[NonEmptyList[Recipe]]("recipes.yaml")
     } yield
       ExploreLimitingReagent
-        .rateOfProduction("Science pack", Oracle(recipes, materials))
+        .rateOfProduction("Assembly machine", Oracle(recipes, materials))
