@@ -23,7 +23,7 @@ object ExploreLimitingReagent extends ExploreLimitingReagent[IO] with IOApp.Simp
       case None =>
         oracle.material(name).miningSpeed
 
-class ExploreLimitingReagent[F[_]](implicit F: Sync[F]):
+class ExploreLimitingReagent[F[_]](using F: Sync[F]):
   private val yamlReader =
     YamlResourceLoader(ResourceFileLoader[F])
 
