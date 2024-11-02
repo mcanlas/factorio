@@ -5,7 +5,7 @@ import java.io.InputStream
 import cats.effect._
 import cats.syntax.all._
 
-class ResourceLoader[F[_]](implicit F: Sync[F]):
+class ResourceFileLoader[F[_]](implicit F: Sync[F]):
   def load(path: String): F[InputStream] =
     F
       .delay:

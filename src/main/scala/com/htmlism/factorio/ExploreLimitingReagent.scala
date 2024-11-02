@@ -25,7 +25,7 @@ object ExploreLimitingReagent extends ExploreLimitingReagent[IO] with IOApp.Simp
 
 class ExploreLimitingReagent[F[_]](implicit F: Sync[F]):
   private val yamlReader =
-    YamlResourceLoader(ResourceLoader[F])
+    YamlResourceLoader(ResourceFileLoader[F])
 
   def run: F[Unit] =
     for
