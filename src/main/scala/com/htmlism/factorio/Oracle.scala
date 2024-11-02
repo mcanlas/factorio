@@ -1,7 +1,7 @@
 package com.htmlism.factorio
 
 import cats.data.NonEmptyList
-import cats.syntax.all._
+import cats.syntax.all.*
 
 case class Oracle(recipes: NonEmptyList[Recipe], materials: NonEmptyList[Material]):
   private val recipesByName =

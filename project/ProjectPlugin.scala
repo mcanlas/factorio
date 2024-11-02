@@ -1,5 +1,5 @@
-import sbt.Keys._
-import sbt._
+import sbt.Keys.*
+import sbt.*
 
 /**
   * Automatically enriches projects with the following settings (despite the word "override").
@@ -27,10 +27,12 @@ object ProjectPlugin extends AutoPlugin {
         p.settings(libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.16" % "test")
 
       def withYaml: Project =
-        p.settings(libraryDependencies ++= Seq(
-          "io.circe" %% "circe-yaml" % "0.14.1",
-          "io.circe" %% "circe-generic" % "0.14.1"
-        ))
+        p.settings(
+          libraryDependencies ++= Seq(
+            "io.circe" %% "circe-yaml"    % "0.14.1",
+            "io.circe" %% "circe-generic" % "0.14.1"
+          )
+        )
 
       def withFileIOScala3: Project =
         p

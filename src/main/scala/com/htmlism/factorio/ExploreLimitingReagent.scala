@@ -1,9 +1,9 @@
 package com.htmlism.factorio
 
-import cats.data._
-import cats.effect._
-import cats.syntax.all._
-import io.circe.generic.auto._
+import cats.data.*
+import cats.effect.*
+import cats.syntax.all.*
+import io.circe.generic.auto.*
 
 import com.htmlism.common.*
 
@@ -28,12 +28,11 @@ class ExploreLimitingReagent[F[_]](implicit F: Sync[F]):
     YamlResourceLoader(ResourceLoader[F])
 
   def run: F[Unit] =
-    for {
+    for
       materials <- yamlReader
         .loadAs[NonEmptyList[Material]]("materials.yaml")
 
       recipes <- yamlReader
         .loadAs[NonEmptyList[Recipe]]("recipes.yaml")
-    } yield
-      ExploreLimitingReagent
-        .rateOfProduction("Assembly machine", Oracle(recipes, materials))
+    yield ExploreLimitingReagent
+      .rateOfProduction("Assembly machine", Oracle(recipes, materials))

@@ -8,8 +8,7 @@ import cats.syntax.all._
 class ResourceLoader[F[_]](implicit F: Sync[F]):
   def load(path: String): F[InputStream] =
     F
-      .delay {
+      .delay:
         getClass
           .getClassLoader
           .getResourceAsStream(path)
-      }
