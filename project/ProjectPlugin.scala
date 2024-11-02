@@ -21,10 +21,10 @@ object ProjectPlugin extends AutoPlugin {
     implicit class ProjectOps(p: Project) {
       def withEffectMonad: Project =
         p
-          .settings(libraryDependencies += "org.typelevel" %% "cats-effect" % "3.2.9")
+          .settings(libraryDependencies += "org.typelevel" %% "cats-effect" % "3.5.4")
 
       def withTesting: Project =
-        p.settings(libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.11" % "test")
+        p.settings(libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.16" % "test")
 
       def withYaml: Project =
         p.settings(libraryDependencies ++= Seq(
@@ -35,7 +35,7 @@ object ProjectPlugin extends AutoPlugin {
       def withFileIOScala3: Project =
         p
           .settings(
-            libraryDependencies += ("com.github.pathikrit" %% "better-files" % "3.9.1").cross(CrossVersion.for3Use2_13)
+            libraryDependencies += ("com.github.pathikrit" %% "better-files" % "3.9.2").cross(CrossVersion.for3Use2_13)
           )
     }
   }
