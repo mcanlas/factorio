@@ -34,5 +34,7 @@ class ExploreLimitingReagent[F[_]](implicit F: Sync[F]):
 
       recipes <- yamlReader
         .loadAs[NonEmptyList[Recipe]]("recipes.yaml")
-    yield ExploreLimitingReagent
-      .rateOfProduction("Assembly machine", Oracle(recipes, materials))
+    yield println(
+      ExploreLimitingReagent
+        .rateOfProduction("Assembly machine", Oracle(recipes, materials))
+    )
