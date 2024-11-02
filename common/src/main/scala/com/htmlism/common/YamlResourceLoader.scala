@@ -11,9 +11,6 @@ class YamlResourceLoader[F[_]](res: ResourceFileLoader[F])(using F: Sync[F]):
     res
       .load(path)
       .map(new InputStreamReader(_))
-      .use: r =>
-        yaml
-          .parser
-          .parse(r)
-          .flatMap(_.as[A])
-          .liftTo
+      .use(r => yaml.parser.parse(r).pure)
+      .flatMap(_.liftTo)
+      .flatMap(_.as[A].liftTo)
