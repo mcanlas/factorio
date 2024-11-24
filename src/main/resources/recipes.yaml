@@ -41,3 +41,83 @@
   requirements:
     - name: Copper plate
       quantity: 0.5
+- name: Green science
+  craftingTime: 6
+  requirements:
+    - name: Yellow inserter
+      quantity: 1
+    - name: Yellow belt
+      quantity: 1
+- name: Yellow inserter
+  craftingTime: 0.5
+  requirements:
+    - name: Green circuit
+      quantity: 1
+    - name: Iron gear wheel
+      quantity: 1
+    - name: Iron plate
+      quantity: 1
+- name: Yellow belt
+  craftingTime: 0.5
+  requirements:
+    - name: Iron gear wheel
+      quantity: 1
+    - name: Iron plate
+      quantity: 1
+- name: Green circuit
+  craftingTime: 0.5
+  requirements:
+    - name: Copper cable
+      quantity: 3
+    - name: Iron plate
+      quantity: 1
+- name: Copper cable
+  craftingTime: 0.5
+  requirements:
+    - name: Copper plate
+      quantity: 0.5
+- name: Gray science
+  craftingTime: 10
+  requirements:
+    - name: Grenade
+      quantity: 1
+    - name: Red bullets
+      quantity: 1
+    - name: Wall
+      quantity: 2
+- name: Grenade
+  craftingTime: 8
+  requirements:
+    - name: Coal
+      quantity: 10
+    - name: Iron plate
+      quantity: 5
+- name: Yellow bullets
+  craftingTime: 1
+  requirements:
+    - name: Iron plate
+      quantity: 4
+- name: Red bullets
+  craftingTime: 3
+  requirements:
+    - name: Copper plate
+      quantity: 5
+    - name: Yellow bullets
+      quantity: 1
+    - name: Steel plate
+      quantity: 1
+- name: Steel plate
+  craftingTime: 16
+  requirements:
+    - name: Iron plate
+      quantity: 5
+- name: Wall
+  craftingTime: 0.5
+  requirements:
+    - name: Stone brick
+      quantity: 5
+- name: Stone brick
+  craftingTime: 3.2
+  requirements:
+    - name: Stone
+      quantity: 2
