@@ -6,7 +6,7 @@ import cats.effect._
 import cats.syntax.all._
 import io.circe._
 
-class YamlResourceLoader[F[_] : Sync](res: ResourceFileLoader[F]):
+class YamlResourceLoader[F[_] : Sync](res: JarResourceFileLoader[F]):
   def loadAs[A: Decoder](path: String): F[A] =
     res
       .load(path)

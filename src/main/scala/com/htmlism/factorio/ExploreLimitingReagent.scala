@@ -9,7 +9,7 @@ import io.circe.generic.auto.*
 import com.htmlism.common.*
 
 object ExploreLimitingReagent
-    extends ExploreLimitingReagent[IO](YamlResourceLoader(ResourceFileLoader[IO]))
+    extends ExploreLimitingReagent[IO](YamlResourceLoader(JarResourceFileLoader[IO]))
     with IOApp.Simple:
   def rateOfProduction(name: String, oracle: Oracle): Double =
     oracle.recipe(name) match
