@@ -18,8 +18,8 @@ object ExploreDependencyGraph extends IOApp.Simple:
     List(
       "Red science",
       "Green science",
-      "Gray science"
-//      "Blue science"
+      "Gray science",
+      "Blue science"
     )
 
   case class Edge(src: String, dest: String)

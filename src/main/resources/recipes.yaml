@@ -121,3 +121,40 @@
   requirements:
     - name: Stone
       quantity: 2
+- name: Blue science
+  craftingTime: 24
+  requirements:
+    - name: Red circuit
+      quantity: 3
+    - name: Engine unit
+      quantity: 2
+    - name: Sulfur
+      quantity: 1
+- name: Red circuit
+  craftingTime: 6
+  requirements:
+    - name: Copper cable
+      quantity: 4
+    - name: Green circuit
+      quantity: 2
+    - name: Plastic bar
+      quantity: 2
+- name: Plastic bar
+  craftingTime: 1
+  requirements:
+    - name: Coal
+      quantity: 1
+- name: Engine unit
+  craftingTime: 10
+  requirements:
+    - name: Iron gear wheel
+      quantity: 1
+    - name: Pipe
+      quantity: 2
+    - name: Steel plate
+      quantity: 1
+- name: Pipe
+  craftingTime: 0.5
+  requirements:
+    - name: Iron plate
+      quantity: 1
