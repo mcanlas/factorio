@@ -158,3 +158,46 @@
   requirements:
     - name: Iron plate
       quantity: 1
+- name: Medium electric pole
+  craftingTime: 0.5
+  requirements:
+    - name: Copper cable
+      quantity: 2
+    - name: Iron stick
+      quantity: 4
+    - name: Steel plate
+      quantity: 2
+- name: Big electric pole
+  craftingTime: 0.5
+  requirements:
+    - name: Copper cable
+      quantity: 4
+    - name: Iron stick
+      quantity: 8
+    - name: Steel plate
+      quantity: 5
+- name: Iron stick
+  craftingTime: 0.5
+  requirements:
+    - name: Iron plate
+      quantity: 1
+- name: Concrete
+  craftingTime: 10
+  requirements:
+    - name: Iron ore
+      quantity: 1
+    - name: Water
+      quantity: 100
+    - name: Stone brick
+      quantity: 5
+- name: Refined concrete
+  craftingTime: 15
+  requirements:
+    - name: Concrete
+      quantity: 20
+    - name: Iron stick
+      quantity: 8
+    - name: Steel plate
+      quantity: 1
+    - name: Water
+      quantity: 100

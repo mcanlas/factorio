@@ -16,6 +16,9 @@ import com.htmlism.factorio.Recipe.Requirement
 object ExploreDependencyGraph extends IOApp.Simple:
   val targets =
     List(
+      "Medium electric pole",
+      "Big electric pole",
+      "Refined concrete",
       "Red science",
       "Green science",
       "Gray science",
