@@ -201,3 +201,10 @@
       quantity: 1
     - name: Water
       quantity: 100
+- name: Red belt
+  craftingTime: 0.5
+  requirements:
+    - name: Iron gear wheel
+      quantity: 5
+    - name: Yellow belt
+      quantity: 1

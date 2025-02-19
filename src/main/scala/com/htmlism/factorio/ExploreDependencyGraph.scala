@@ -14,16 +14,24 @@ import com.htmlism.common.YamlResourceLoader
 import com.htmlism.factorio.Recipe.Requirement
 
 object ExploreDependencyGraph extends IOApp.Simple:
-  val targets =
+  val infrastructureTargets =
     List(
       "Medium electric pole",
       "Big electric pole",
       "Refined concrete",
+      "Red belt"
+    )
+
+  val scienceOutputTargets =
+    List(
       "Red science",
       "Green science",
       "Gray science",
       "Blue science"
     )
+
+  val allTargets =
+    infrastructureTargets ++ scienceOutputTargets
 
   case class Edge(src: String, dest: String)
 
@@ -43,14 +51,26 @@ object ExploreDependencyGraph extends IOApp.Simple:
         .map(_.toList.fproductLeft(_.name).toMap)
 
       res =
-        targets
+        allTargets
           .map(t => Requirement(t, 1))
           .foldLeft(emptyGraph)(incorporate(recipes))
+
+      resWithScience =
+        scienceOutputTargets
+          .foldLeft(res)((acc, t) => acc + (Edge(t, "Research") -> 1.0))
+
+      resWithScienceAndInfra =
+        infrastructureTargets
+          .foldLeft(resWithScience)((acc, t) => acc + (Edge(t, "Infra") -> 1.0))
+
+      resWithScienceAndInfraAndInputs =
+        List("Coal", "Iron ore", "Copper ore", "Stone", "Water", "Sulfur")
+          .foldLeft(resWithScienceAndInfra)((acc, t) => acc + (Edge("Raw input", t) -> 1.0))
 
       out = new PrintStream(new FileOutputStream("blah.puml"))
       _  <- IO(out.println("@startuml"))
 
-      _ <- res
+      _ <- resWithScienceAndInfraAndInputs
         .toList
         .traverse: (edge, quantity) =>
           val qString =
