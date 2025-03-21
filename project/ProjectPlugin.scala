@@ -24,7 +24,7 @@ object ProjectPlugin extends AutoPlugin {
           .settings(libraryDependencies += "org.typelevel" %% "cats-effect" % "3.6.0-RC2")
 
       def withTesting: Project =
-        p.settings(libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.16" % "test")
+        p.settings(libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.19" % "test")
 
       def withYaml: Project =
         p.settings(
