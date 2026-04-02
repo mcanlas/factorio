@@ -21,7 +21,7 @@ object ExploreLimitingReagent
 
         println(s"to do $name, you need $requirementRates")
 
-        requirementRates.map(_._2).toList.min
+        requirementRates.map(_._2).toList.minOption.getOrElse(0)
 
       case None =>
         oracle.material(name).miningSpeed
